@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcService.Protos";
+service Employee{
+	rpc GetEmployeeInfo(EmployeeinputDto) returns (EmployeeDto);
+}
+message EmployeeinputDto{
+	int32 EMpId = 1;
+}
+message EmployeeDto{
+	string name =1;
+	string name2 =2;
+}
